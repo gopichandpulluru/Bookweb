@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    show-sql: false
+  mail:
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
+logging:
+  level:
+    com.shopease: INFO
+
+app:
+  redis:
+    enabled: true

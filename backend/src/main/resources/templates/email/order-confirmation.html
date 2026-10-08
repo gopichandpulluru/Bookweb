@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body style="font-family: Arial, sans-serif; color: #222;">
+  <h2>Thanks for your order, <span th:text="${name}">Customer</span>!</h2>
+  <p>Your order <strong>#<span th:text="${orderId}">1</span></strong> has been placed.</p>
+  <p>Order total: <strong th:text="${total}">0.00</strong></p>
+  <p>We'll email you again when it ships.</p>
+  <p>- The ShopEase team</p>
+</body>
+</html>

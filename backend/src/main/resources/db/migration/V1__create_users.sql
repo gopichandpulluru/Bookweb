@@ -1,0 +1,18 @@
+CREATE TABLE roles (
+    id   BIGSERIAL PRIMARY KEY,
+    name VARCHAR(30) NOT NULL UNIQUE
+);
+
+INSERT INTO roles (name) VALUES ('ROLE_CUSTOMER'), ('ROLE_ADMIN');
+
+CREATE TABLE users (
+    id         BIGSERIAL PRIMARY KEY,
+    full_name  VARCHAR(100) NOT NULL,
+    email      VARCHAR(150) NOT NULL UNIQUE,
+    password   VARCHAR(255) NOT NULL,
+    phone      VARCHAR(20),
+    enabled    BOOLEAN      NOT NULL DEFAULT TRUE,
+    role_id    BIGINT       NOT NULL REFERENCES roles (id),
+    created_at TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

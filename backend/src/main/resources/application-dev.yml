@@ -1,0 +1,8 @@
+spring:
+  jpa:
+    show-sql: true
+
+logging:
+  level:
+    com.shopease: DEBUG
+    org.springframework.security: INFO
